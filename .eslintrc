@@ -1,0 +1,13 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "jest": true
+  },
+  "rules": {
+    "no-param-reassign": 0,
+    "no-plusplus": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": 0,
+    "import/no-extraneous-dependencies": 0
+  }
+}
