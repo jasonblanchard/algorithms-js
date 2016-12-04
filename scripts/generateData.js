@@ -6,15 +6,13 @@ const amount = process.argv[3];
 
 fs.unlink(file, () => {});
 
-fs.appendFileSync(file, '[');
+const output = [];
 
 times(amount, (i) => {
+  /* eslint-disable */
   const num = Math.floor((Math.random() * 9) + 1);
-  if (i === amount - 1) {
-    fs.appendFileSync(file, num);
-    return;
-  }
-  fs.appendFileSync(file, `${num}, `);
+  console.log(`Writing ${num} to ${i}`);
+  output.push(num);
 });
 
-fs.appendFileSync(file, ']');
+fs.appendFileSync(file, JSON.stringify(output));

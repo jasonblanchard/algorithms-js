@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_PATH=. jest --watch"
+    "test": "NODE_PATH=. jest --watch",
+    "benchmark": "NODE_PATH=. babel-node ./benchmark.js",
+    "generateData": "NODE_PATH=. babel-node ./scripts/generateData.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,5 +22,8 @@
     "eslint-plugin-react": "^6.4.1",
     "jest": "^16.0.2",
     "lodash.times": "^4.3.2"
+  },
+  "dependencies": {
+    "babel-cli": "^6.18.0"
   }
 }
