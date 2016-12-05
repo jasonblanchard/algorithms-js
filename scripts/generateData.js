@@ -4,8 +4,6 @@ import times from 'lodash.times';
 const file = process.argv[2];
 const amount = process.argv[3];
 
-fs.unlink(file, () => {});
-
 const output = [];
 
 times(amount, (i) => {
@@ -15,4 +13,4 @@ times(amount, (i) => {
   output.push(num);
 });
 
-fs.appendFileSync(file, JSON.stringify(output));
+fs.writeFileSync(file, JSON.stringify(output));
